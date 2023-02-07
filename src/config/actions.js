@@ -16,7 +16,7 @@ export const fetchPosts = ()=>{
     return function(dispatch,getState){
         dispatch(fetchRequest());
         
-        axios.get('https://jsonplaceholer.typicode.com/posts')
+        axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(res=> dispatch(fetchSuccess(res.data)))
         .catch(err=>dispatch(fetchFailure(err.message)))
     }
